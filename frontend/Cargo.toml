@@ -1,0 +1,9 @@
+[package]
+name = "snowstry"
+version = "0.1.0"
+edition = "2021"
+description = "Snowstry frontend rewrite in yew-rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+yew = "0.19"

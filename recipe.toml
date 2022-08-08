@@ -1,0 +1,28 @@
+[build]
+cmd = """
+cd frontend &&
+trunk build
+"""
+
+[custom.clean]
+cmd = "cargo clean"
+run = false
+
+[custom.setup]
+cmd = """
+rustup install stable &&
+rustup default stable &&
+rustup target add wasm32-unknown-unknown &&
+yarn global add tailwindcss
+"""
+run = false
+
+[custom.run]
+cmd = """
+cd frontend &&
+trunk serve
+"""
+run = false
+
+[pre.fmt]
+cmd = "cd frontend && cargo fmt"

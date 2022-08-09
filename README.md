@@ -24,13 +24,7 @@
 bake setup
 ```
 
-Install trunk and wasm-bindgen-cli:
-
-```bash
-cargo install trunk wasm-bindgen-cli
-```
-
-### Building
+### Running
 
 ```bash
 bake

@@ -1,7 +1,7 @@
 [build]
 cmd = """
 cd frontend &&
-trunk build
+trunk serve
 """
 
 [custom.clean]
@@ -13,14 +13,9 @@ cmd = """
 rustup install stable &&
 rustup default stable &&
 rustup target add wasm32-unknown-unknown &&
-yarn global add tailwindcss
-"""
-run = false
-
-[custom.run]
-cmd = """
-cd frontend &&
-trunk serve
+yarn global add tailwindcss &&
+cargo install trunk &&
+cargo install wasm-bindgen-cli
 """
 run = false
 

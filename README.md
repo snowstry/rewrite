@@ -1,6 +1,6 @@
  <div align="center">
    <a href="https://github.com/snowstry/snowstry">
-    <img src="./frontend/assets/Snowstry.png" alt="Logo" width="20%">
+    <img src="./frontend/public/Snowstry.png" alt="Logo" width="20%">
    </a>
 
    <h3 align="center">Snowstry</h3>

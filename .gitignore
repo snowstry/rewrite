@@ -1,4 +1,4 @@
 /frontend/dist/
 /frontend/target/
 /frontend/Cargo.lock
-/frontend/assets/css/out.css
+/frontend/public/css/out.css

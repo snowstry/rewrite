@@ -17,7 +17,7 @@ impl Component for Text {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
-            <h1 class="grid place-items-center h-screen text-nord_light-300">{format!("{}", ctx.props().text)}</h1>
+            <h1 class="text-nord_light-300">{format!("{}", ctx.props().text)}</h1>
         }
     }
 }

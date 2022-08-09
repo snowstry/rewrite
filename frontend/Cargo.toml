@@ -7,3 +7,4 @@ description = "Snowstry frontend rewrite in yew-rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
 yew = "0.19"
+yew-router = "0.16.0"

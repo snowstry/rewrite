@@ -1,21 +1,23 @@
-use yew::{Component, Context, html, Html, Properties};
+use yew::{html, Component, Context, Html, Properties};
 
-#[derive(PartialEq, Properties)]
-pub struct Props;
+#[derive(Clone, PartialEq, Properties)]
+pub struct Props {
+    pub text: String,
+}
 
-pub struct Hello;
+pub struct Text;
 
-impl Component for Hello {
+impl Component for Text {
     type Message = ();
     type Properties = Props;
 
     fn create(_ctx: &Context<Self>) -> Self {
-        Hello
+        Self
     }
 
-    fn view(&self, _ctx: &Context<Self>) -> Html {
+    fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
-            <h1 class="grid place-items-center h-screen text-nord_light-300">{"Hello world"}</h1>
+            <h1 class="grid place-items-center h-screen text-nord_light-300">{format!("{}", ctx.props().text)}</h1>
         }
     }
 }

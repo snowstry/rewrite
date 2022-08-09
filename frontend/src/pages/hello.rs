@@ -1,5 +1,5 @@
-use yew::prelude::*;
 use crate::components::text::Text;
+use yew::prelude::*;
 
 pub struct Hello;
 
@@ -13,7 +13,7 @@ impl Component for Hello {
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
-            <Text text="Hello world"/>
-       }
+             <Text text="Hello world"/>
+        }
     }
 }

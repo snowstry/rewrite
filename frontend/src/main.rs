@@ -3,8 +3,8 @@ use yew_router::prelude::*;
 
 mod components;
 mod pages;
-use pages::home::Home;
 use pages::hello::Hello;
+use pages::home::Home;
 use pages::notfound::NotFound;
 
 #[derive(Clone, Routable, PartialEq)]

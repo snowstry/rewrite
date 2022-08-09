@@ -1,5 +1,5 @@
 module.exports = {
-	content: ["./src/**/*.rs", "./index.html", "./assets/css/*.css"],
+	content: ["./src/**/*.rs", "./index.html", "./public/css/*.css"],
 	theme: {
 		colors: {
 			nord_dark: {

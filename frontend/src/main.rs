@@ -2,7 +2,10 @@ use yew::prelude::*;
 use yew_router::prelude::*;
 
 mod components;
-use components::text::Text;
+mod pages;
+use pages::home::Home;
+use pages::hello::Hello;
+use pages::notfound::NotFound;
 
 #[derive(Clone, Routable, PartialEq)]
 enum Route {
@@ -22,13 +25,13 @@ fn main() {
 fn switch(routes: &Route) -> Html {
     match routes {
         Route::Home => html! {
-            <Text text="Home" />
+            <Home />
         },
         Route::HelloWorld => html! {
-            <Text text="Hello world" />
+            <Hello />
         },
         Route::NotFound => html! {
-            <Text text="404" />
+            <NotFound />
         },
     }
 }

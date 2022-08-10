@@ -1,0 +1,12 @@
+services:
+  snowstry-rewrite:
+    build: .
+    environment:
+      - MONGO_URL=mongodb://snowstry:snowstry@mongodb
+    ports:
+      - 3000:3000
+  mongodb:
+    image: mongo:5.0
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=snowstry
+      - MONGO_INITDB_ROOT_PASSWORD=snowstry

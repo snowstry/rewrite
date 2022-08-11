@@ -1,4 +1,3 @@
-use crate::components::nav::Nav;
 use crate::components::text::Text;
 use yew::prelude::*;
 
@@ -15,7 +14,6 @@ impl Component for Hello {
     fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
             <>
-                <Nav />
                 <Text text="Hello world"/>
             </>
         }

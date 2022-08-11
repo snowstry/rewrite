@@ -1,7 +1,13 @@
+use std::collections::HashMap;
 use yew::prelude::*;
 
+#[derive(Properties, PartialEq)]
+pub struct Props {
+    pub links: HashMap<String, String>,
+}
+
 #[function_component(Nav)]
-pub fn navbar() -> Html {
+pub fn navbar(props: &Props) -> Html {
     let navbar_active = use_state_eq(|| false);
 
     let toggle_navbar = {
@@ -13,6 +19,16 @@ pub fn navbar() -> Html {
     };
 
     let active_class = if !*navbar_active { "hidden" } else { "" };
+
+    let link_list: Html = props
+        .links
+        .iter()
+        .map(|(key, value)| {
+            html! {
+                <a href={value.to_owned()} class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-lg text-nord_light-300 items-center justify-center hover:bg-nord_dark-300">{key}</a>
+            }
+        })
+        .collect::<Html>();
 
     html! {
         <nav class="flex items-center flex-wrap bg-nord_dark-400 px-2 text-nord_light-300">
@@ -38,6 +54,7 @@ pub fn navbar() -> Html {
                 </button>
                 <div class={classes!("w-full", "lg:inline-flex", "lg:flex-grow", "text-center", "lg:w-auto", active_class)}>
                     <div class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
+                        {link_list}
                         <a href="/" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-lg text-white items-center justify-center hover:bg-nord_dark-300 text-nord_red">
                             {"Log out"}
                         </a>

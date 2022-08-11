@@ -4,6 +4,10 @@ LABEL maintainers="rv178"
 WORKDIR /opt/snowstry
 COPY . .
 
+RUN apk add openssl \
+		libressl-dev \
+		pkgconfig
+
 RUN	rustup target add wasm32-unknown-unknown; \
 	cargo --verbose install wasm-bindgen-cli;
 

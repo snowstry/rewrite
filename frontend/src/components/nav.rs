@@ -87,7 +87,7 @@ pub fn navbar(props: &Props) -> Html {
                 <div class={classes!("w-full", "lg:inline-flex", "lg:flex-grow", "text-center", "lg:w-auto", nav_active_class)}>
                     <div class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
                         {link_list}
-                        <a href="/" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-lg text-white items-center justify-center hover:bg-nord_dark-300 text-nord_red">
+                        <a href="http://localhost:3001/login/google" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-lg text-white items-center justify-center hover:bg-nord_dark-300 text-nord_red">
                             {"Log out"}
                         </a>
                     </div>

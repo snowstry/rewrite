@@ -3,3 +3,4 @@
 /frontend/Cargo.lock
 /frontend/public/css/out.css
 /api/.env
+/api/api

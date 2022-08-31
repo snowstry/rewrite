@@ -1,8 +1,5 @@
 [build]
-cmd = """
-cd frontend &&
-trunk serve
-"""
+cmd = "cd frontend && trunk serve"
 
 [custom.clean]
 cmd = "cargo clean"
@@ -18,6 +15,9 @@ cargo install trunk &&
 cargo install wasm-bindgen-cli
 """
 run = false
+
+[pre.api]
+cmd = "cd api && go build . && ./api &"
 
 [pre.fmt]
 cmd = "cd frontend && cargo fmt"

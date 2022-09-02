@@ -1,4 +1,3 @@
-use crate::components::text::Text;
 use yew::prelude::*;
 
 pub struct NotFound;
@@ -13,7 +12,9 @@ impl Component for NotFound {
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
-             <Text text="404 | Not found"/>
+            <div class="grid place-items-center h-screen">
+                <h1 class="text-nord_light-300">{"404 | Not found"}</h1>
+            </div>
         }
     }
 }

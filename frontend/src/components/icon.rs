@@ -2,22 +2,22 @@ use yew::{html, Component, Context, Html, Properties};
 
 #[derive(Clone, PartialEq, Properties)]
 pub struct Props {
-    pub text: String,
+    pub name: String,
 }
 
-pub struct Text;
+pub struct Icon {}
 
-impl Component for Text {
+impl Component for Icon {
     type Message = ();
     type Properties = Props;
 
     fn create(_ctx: &Context<Self>) -> Self {
-        Self
+        Self {}
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
-            <h1 class="text-nord_light-300">{format!("{}", ctx.props().text)}</h1>
+            <i class={format!("iconoir-{}", ctx.props().name)}></i>
         }
     }
 }

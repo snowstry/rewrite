@@ -1,6 +1,8 @@
 use std::collections::HashMap;
 use yew::prelude::*;
 
+use crate::components::icon::Icon;
+
 #[derive(Properties, PartialEq)]
 pub struct Props {
     pub links: HashMap<String, String>,
@@ -52,7 +54,7 @@ pub fn navbar(props: &Props) -> Html {
                     />
                     <p class="pl-4 pt-2">{"John Doe"}</p>
                 </a>
-                <button class="bg-nord_dark-300 p-3 rounded-full mt-1 outline-none ease-in-out" onclick={&toggle_search}>{"S"}</button>
+                <button class="bg-nord_dark-300 p-3 rounded-full mt-1 outline-none ease-in-out" onclick={&toggle_search}><Icon name="bubble-search"/></button>
 
                 // Modal
                 <div class={classes!("fade", "flex", "justify-center", "items-center", "overflow-x-hidden", "overflow-y-auto", "fixed", "inset-0", "z-50", "outline-none", "ml-2", "mr-2", "font-jetbrains", search_active_class)}>
@@ -61,13 +63,13 @@ pub fn navbar(props: &Props) -> Html {
                             <div class="flex items-start justify-between">
                                 <p class="text-nord_dark-100 mt-5 ml-5">{"Search users"}</p>
                                 <button onclick={toggle_search}>
-                                    <span class="block text-nord_dark-100 rounded-full text-xl mt-5 mr-5">{"Close"}</span>
+                                    <span class="block text-nord_dark-100 rounded-full text-xl mt-5 mr-5"><Icon name="web-window-close" /></span>
                                 </button>
                             </div>
                             <div class="relative p-6 flex-auto">
                                 <input class="bg-nord_dark-200 outline-none rounded-lg pt-2 pb-2 pl-4 pr-4 w-full" placeholder="Search" />
                                 <ul>
-                                    <li class="bg-nord_dark-300 mt-2 p-2 rounded-lg">{"Duncus"}</li>
+                                    <li class="bg-nord_dark-300 mt-2 px-4 py-2 rounded-lg">{"Duncus"}</li>
                                 </ul>
                             </div>
                         </div>

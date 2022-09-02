@@ -3,7 +3,6 @@ use yew_router::prelude::*;
 
 mod components;
 mod pages;
-use pages::hello::Hello;
 use pages::home::Home;
 use pages::notfound::NotFound;
 
@@ -11,8 +10,6 @@ use pages::notfound::NotFound;
 enum Route {
     #[at("/")]
     Home,
-    #[at("/hello")]
-    HelloWorld,
     #[not_found]
     #[at("/404")]
     NotFound,
@@ -26,9 +23,6 @@ fn switch(routes: &Route) -> Html {
     match routes {
         Route::Home => html! {
             <Home />
-        },
-        Route::HelloWorld => html! {
-            <Hello />
         },
         Route::NotFound => html! {
             <NotFound />

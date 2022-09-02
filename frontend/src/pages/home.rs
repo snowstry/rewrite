@@ -1,5 +1,4 @@
 use crate::components::nav::Nav;
-use crate::components::text::Text;
 use std::collections::HashMap;
 use yew::prelude::*;
 
@@ -20,7 +19,6 @@ impl Component for Home {
         html! {
             <>
                 <Nav links={links}/>
-                <Text text="Home" />
             </>
         }
     }
